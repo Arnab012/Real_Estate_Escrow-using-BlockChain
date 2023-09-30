@@ -29,6 +29,8 @@ describe("Counter", () => {
     it("read the count from the  getcount public variable", async () => {
       expect(await counter.getCount()).to.equal(1);
     });
+
+
     it("increment the Count", async () => {
       transaction = await counter.increment();
       await transaction.wait();
@@ -52,6 +54,8 @@ describe("Counter", () => {
     it("read the count from the  getcount public variable", async () => {
       expect(await counter.getNAme()).to.equal("Arnab hansda");
     });
+
+    
     it("Update the NAme", async () => {
       transaction = await counter.setName("new Name");
       await transaction.wait();
